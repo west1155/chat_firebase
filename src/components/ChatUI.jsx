@@ -1,8 +1,8 @@
 import React, {useState, useEffect } from 'react'
 import s from './ChatUI.module.css'
 import db from './initFirestore';
-import { collection, onSnapshot, addDoc, serverTimestamp, orderBy, limit, query} from "firebase/firestore";
 import deleteAllMessages from './deleteHistory'
+import { collection, onSnapshot, addDoc, serverTimestamp, orderBy, limit, query} from "firebase/firestore";
 
 const ChatUI = () => {
     
@@ -49,6 +49,7 @@ const ChatUI = () => {
                 </input>
                 <button type='submit'>SEND</button>
             </form>
+            <button onClick={deleteAllMessages}>Delete history</button>
         </div>
         <div>
             

@@ -1,7 +1,7 @@
 import db from './initFirestore';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 
-export async function deleteAllMessages() {
+export default async function deleteAllMessages() {
     const messagesCollection = collection(db, 'messages');
     
     try {
